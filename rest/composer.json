@@ -1,0 +1,19 @@
+{
+  "name": "rest/api",
+  "autoload": {
+    "psr-4": {
+      "App\\Models\\Dev\\": "v1/models/developers/",
+      "App\\Models\\Dev\\Base\\": "v1/models/developers/base/",
+      "App\\Models\\Dev\\Settings\\Category\\": "v1/models/developers/settings/category/",
+      "App\\Models\\Dev\\Settings\\Designation\\": "v1/models/developers/settings/designation/",
+      "App\\Models\\Dev\\Settings\\Users\\Roles\\": "v1/models/developers/settings/users/roles/",
+      "App\\Models\\Dev\\Settings\\Users\\System\\": "v1/models/developers/settings/users/system/",
+      "App\\V1\\Core\\Exceptions\\": "v1/core/exceptions/",
+      "App\\V1\\Middleware\\": "v1/middleware/",
+      "App\\Utils\\": "v1/utils/"
+    },
+    "files": [
+      "v1/core/functions.php"
+    ]
+  }
+}
