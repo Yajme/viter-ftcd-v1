@@ -76,7 +76,7 @@ const ModalAddDonors = ({ itemEdit }) => {
         {/* Header*/}
         <div className="modal-header relative mb-4">
           <h3 className="text-dark text-sm">
-            {itemEdit ? "Update" : "Add"} Role
+            {itemEdit ? "Update" : "Add"} Donor
           </h3>
           <button
             type="button"
@@ -92,10 +92,13 @@ const ModalAddDonors = ({ itemEdit }) => {
             initialValues={initVal}
             validationSchema={yupSchema}
             onSubmit={async (values, { setSubmitting, resetForm }) => {
-              mutation.mutate(values);
+              const payload = {
+                ...values,
+                donor_is_active: values.donor_is_active ? 1 : 0,  
+              };
+              mutation.mutate(payload); 
               dispatch(setError(false));
-            }}
-          >
+            }}>
             {(props) => {
               return (
                 <Form className="h-full">

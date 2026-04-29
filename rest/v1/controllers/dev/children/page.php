@@ -1,6 +1,8 @@
 <?php
 
-use App\Models\Dev\Donor\Donors;
+use App\Models\Dev\Children\Children;
+
+
  require_once __DIR__ . '/../../../core/bootstrap.php';
 
 
@@ -13,13 +15,13 @@ use App\Models\Dev\Donor\Donors;
         $conn = null;
         $conn = checkDbConnection($conn);
         // make use of classes
-        $val = new Donors($conn);
+        $val = new Children($conn);
         if (array_key_exists("start", $_GET)) {
             checkPayload($data);
 
             $val->filters["start"] = (int)$_GET["start"];
             $val->filters["total"] = 10;
-            $val->columnNames["donor_is_active"] = $data["filterData"];// == "" ? "" : intval($data["filterData"]);
+            $val->columnNames["child_is_active"] = $data["filterData"];// == "" ? "" : intval($data["filterData"]);
             $val->filters["search"] = $data["searchValue"];
 
             checkLimitId($val->filters["start"], $val->filters["total"]);

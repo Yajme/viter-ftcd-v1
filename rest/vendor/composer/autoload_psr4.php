@@ -15,6 +15,7 @@ return array(
     'App\\Models\\Dev\\Settings\\Designation\\' => array($baseDir . '/v1/models/developers/settings/designation'),
     'App\\Models\\Dev\\Settings\\Category\\' => array($baseDir . '/v1/models/developers/settings/category'),
     'App\\Models\\Dev\\Donor\\' => array($baseDir . '/v1/models/developers/donor'),
+    'App\\Models\\Dev\\Children\\' => array($baseDir . '/v1/models/developers/children'),
     'App\\Models\\Dev\\Base\\' => array($baseDir . '/v1/models/developers/base'),
     'App\\Models\\Dev\\' => array($baseDir . '/v1/models/developers'),
 );

@@ -22,6 +22,7 @@ class ComposerStaticInitcf484b268b3c98f3dcf243e17e997c34
             'App\\Models\\Dev\\Settings\\Designation\\' => 36,
             'App\\Models\\Dev\\Settings\\Category\\' => 33,
             'App\\Models\\Dev\\Donor\\' => 21,
+            'App\\Models\\Dev\\Children\\' => 24,
             'App\\Models\\Dev\\Base\\' => 20,
             'App\\Models\\Dev\\' => 15,
         ),
@@ -63,6 +64,10 @@ class ComposerStaticInitcf484b268b3c98f3dcf243e17e997c34
         'App\\Models\\Dev\\Donor\\' =>
         array (
             0 => __DIR__ . '/../..' . '/v1/models/developers/donor',
+        ),
+        'App\\Models\\Dev\\Children\\' =>
+        array (
+            0 => __DIR__ . '/../..' . '/v1/models/developers/children',
         ),
         'App\\Models\\Dev\\Base\\' =>
         array (

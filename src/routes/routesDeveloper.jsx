@@ -8,6 +8,7 @@ import SystemUsers from "#pages/dev/settings/users/system/System";
 import Users from "#pages/dev/settings/users/Users";
 import Notification from "#pages/dev/settings/notifications/Notifications";
 import Donors from "#pages/dev/donors/Donors";
+import Children from "#pages/dev/children/Children";
 const BASE_URL = `${devNavUrl}/${urlDeveloper}`;
 export const routesDeveloper = [
   {
@@ -23,6 +24,14 @@ export const routesDeveloper = [
     element: (
       <>
         <Donors />
+      </>
+    ),
+  },
+  {
+    path: `${BASE_URL}/children`,
+    element: (
+      <>
+        <Children />
       </>
     ),
   },

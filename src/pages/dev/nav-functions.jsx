@@ -19,7 +19,7 @@ export const navList = [
     label: "Children List",
     icon: <FaChildren />,
     menu: "childrenlist",
-    path: ``,
+    path: `${devNavUrl}/${urlDeveloper}/children`,
   },
   {
     label: "Reports",

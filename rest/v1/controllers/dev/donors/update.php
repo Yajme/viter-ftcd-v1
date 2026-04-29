@@ -11,6 +11,7 @@ $conn = checkDbConnection($conn);
 if (array_key_exists("id", $_GET)) {
 
     $val = new Donors($conn);
+    $val->columnNames["donor_is_active"] = trim($data["donor_is_active"]);
     $val->columnNames["donor_full_name"] = trim($data["donor_full_name"]);
     $val->columnNames["donor_email"] = trim($data["donor_email"]);
     $val->columnNames["donor_contact"] = trim($data["donor_contact"]);
