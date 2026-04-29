@@ -1,18 +1,12 @@
 <?php
-
-use App\Models\Dev\Settings\Category\Category;
-
-
-
-
+use App\Models\Dev\Settings\Notifications\Notifications;
 
 // check database connection
 $conn = null;
 $conn = checkDbConnection($conn);
-$val = new Category($conn);
+$val = new Notifications($conn);
 
 if (empty($_GET)) {
-    $val->columnNames['category_name'] = "";
     $query = checkReadAll($val);
     http_response_code(200);
     getQueriedData($query);

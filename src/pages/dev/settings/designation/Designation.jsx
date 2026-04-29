@@ -7,7 +7,7 @@ import ModalAddDesignation from "./ModalAddDesignation";
 import useQueryData from "#functions/custom-hooks/useQueryData";
 import { apiVersion } from "#functions/functions-general";
 import ButtonSpinner from "#partials/spinners/ButtonSpinner";
-import Layout from "#pages/dev/layout";
+import Settings from "#pages/dev/settings/Settings";
 const Designation = () => {
   const { store, dispatch } = React.useContext(StoreContext);
   const [itemEdit, setItemEdit] = React.useState(null);
@@ -17,7 +17,7 @@ const Designation = () => {
   } = useQueryData(
     `${apiVersion}/controllers/dev/settings/category/index.php`,
     "get",
-    "roles",
+    "category",
     );
   
   const filterArrayActiveCategory = dataCategory?.data.filter((item) => item.category_is_active === 1);
@@ -30,7 +30,7 @@ const Designation = () => {
   return (
     <>
       
-       <Layout>
+       <Settings menu="Designation" submenu="">
          {/* Page Header */}
         <div className="flex items-center justify-between w-full">
           <h1>Designation</h1>
@@ -61,7 +61,7 @@ const Designation = () => {
           }/>
         </>
       )}
-       </Layout>
+       </Settings>
     </>
   );
 };

@@ -18,8 +18,10 @@ class ComposerStaticInitcf484b268b3c98f3dcf243e17e997c34
             'App\\Utils\\' => 10,
             'App\\Models\\Dev\\Settings\\Users\\System\\' => 37,
             'App\\Models\\Dev\\Settings\\Users\\Roles\\' => 36,
+            'App\\Models\\Dev\\Settings\\Notifications\\' => 38,
             'App\\Models\\Dev\\Settings\\Designation\\' => 36,
             'App\\Models\\Dev\\Settings\\Category\\' => 33,
+            'App\\Models\\Dev\\Donor\\' => 21,
             'App\\Models\\Dev\\Base\\' => 20,
             'App\\Models\\Dev\\' => 15,
         ),
@@ -46,6 +48,10 @@ class ComposerStaticInitcf484b268b3c98f3dcf243e17e997c34
         array (
             0 => __DIR__ . '/../..' . '/v1/models/developers/settings/users/roles',
         ),
+        'App\\Models\\Dev\\Settings\\Notifications\\' =>
+        array (
+            0 => __DIR__ . '/../..' . '/v1/models/developers/settings/notifications',
+        ),
         'App\\Models\\Dev\\Settings\\Designation\\' =>
         array (
             0 => __DIR__ . '/../..' . '/v1/models/developers/settings/designation',
@@ -53,6 +59,10 @@ class ComposerStaticInitcf484b268b3c98f3dcf243e17e997c34
         'App\\Models\\Dev\\Settings\\Category\\' =>
         array (
             0 => __DIR__ . '/../..' . '/v1/models/developers/settings/category',
+        ),
+        'App\\Models\\Dev\\Donor\\' =>
+        array (
+            0 => __DIR__ . '/../..' . '/v1/models/developers/donor',
         ),
         'App\\Models\\Dev\\Base\\' =>
         array (

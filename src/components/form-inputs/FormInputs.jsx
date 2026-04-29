@@ -184,7 +184,7 @@ export const InputCheckbox = ({
   ...props
 }) => {
   const { dispatch } = React.useContext(StoreContext);
-  const [field, meta] = useField(props);
+  const [field, meta] = useField({...props, type: 'checkbox'});
   return (
     <>
       <div className="flex items-center gap-2">
@@ -193,16 +193,16 @@ export const InputCheckbox = ({
           htmlFor={props.id || props.name}
         >
           <input
-            checked={field.value}
-            value={field.value}
+            
             {...field}
             {...props}
+            type="checkbox"
+            checked={field.value}
             className={
               meta.touched && meta.error
                 ? "w-auto h-auto error-show"
                 : "p-1.5 before:content-[''] peer relative h-auto w-auto cursor-pointer border-accent appearance-none rounded-sm transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:-translate-y-2/4 before:-translate-x-2/4 before:opacity-0 before:transition-opacity checked:bg-accent"
             }
-            type="checkbox"
             onChange={(e) => {
               onChange !== null && onChange(e);
               field.onChange(e);

@@ -6,6 +6,8 @@ import Settings from "#pages/dev/settings/Settings";
 import Roles from "#pages/dev/settings/users/role/Roles";
 import SystemUsers from "#pages/dev/settings/users/system/System";
 import Users from "#pages/dev/settings/users/Users";
+import Notification from "#pages/dev/settings/notifications/Notifications";
+import Donors from "#pages/dev/donors/Donors";
 const BASE_URL = `${devNavUrl}/${urlDeveloper}`;
 export const routesDeveloper = [
   {
@@ -13,6 +15,14 @@ export const routesDeveloper = [
     element: (
       <>
         <Layout />
+      </>
+    ),
+  },
+  {
+    path: `${BASE_URL}/donors`,
+    element: (
+      <>
+        <Donors />
       </>
     ),
   },
@@ -29,6 +39,14 @@ export const routesDeveloper = [
     element: (
       <>
           <Designation />
+      </>
+    ),
+  },
+  {
+    path: `${BASE_URL}/settings/notifications`,
+    element: (
+      <>
+          <Notification />
       </>
     ),
   },

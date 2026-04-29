@@ -13,7 +13,7 @@ export const navList = [
     label: "Donor List",
     icon: <FaHandHoldingHeart />,
     menu: "donorlist",
-    path: ``,
+    path: `${devNavUrl}/${urlDeveloper}/donors`,
   },
   {
     label: "Children List",
@@ -61,7 +61,7 @@ export const navList = [
       },
       {
         label: "Notification",
-        path: ``,
+        path: `${devNavUrl}/${urlDeveloper}/settings/notifications`,
       },
       {
         label: "Maintenance",
