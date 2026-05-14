@@ -1,5 +1,5 @@
 import { queryDataInfinite } from "#functions/custom-hooks/queryDataInfinite";
-import { apiVersion} from "#functions/functions-general";
+import { apiVersion, formatDate} from "#functions/functions-general";
 import Loadmore from "#partials/Loadmore";
 import ModalArchive from "#partials/modals/ModalArchive";
 import ModalDelete from "#partials/modals/ModalDelete";
@@ -187,10 +187,10 @@ const getAge = (birthdate) => {
                         />
                       </td>
                       <td>{item.child_full_name}</td>
-                      <td>{item.child_birthdate}</td>
+                      <td>{formatDate(item.child_birthdate,"","long-date")}</td>
                       <td>{getAge(item.child_birthdate)}</td>
                       <td>{item.child_residency}</td>
-                      <td>{item.child_donation_limit}</td>
+                      <td>${item.child_donation_limit}</td>
                       <td>
                         <div className="flex items-center gap-3 justify-center">
                           {item.child_is_active == 1 ? (
